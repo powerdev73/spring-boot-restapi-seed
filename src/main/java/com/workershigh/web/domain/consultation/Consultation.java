@@ -1,5 +1,7 @@
 package com.workershigh.web.domain.consultation;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.workershigh.web.domain.consultation.enums.SpaceType;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -25,5 +27,6 @@ public class Consultation {
     private String email;
 
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createAt;
 }
