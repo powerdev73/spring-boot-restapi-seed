@@ -10,6 +10,7 @@ import java.util.Collection;
 @NoArgsConstructor
 @AllArgsConstructor(staticName = "of")
 public class PageResultOf<T> {
+
     Collection<T> items;
 
     Integer page;
