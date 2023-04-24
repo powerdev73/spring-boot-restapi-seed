@@ -15,13 +15,13 @@ public class BaseController {
     public static ResponseResult successResult() {
         return new ResponseResult()
                 .setCode(ResultCode.SUCCESS)
-                .setMessage("SUCCESS");
+                .setMessage(DEFAULT_SUCCESS_MESSAGE);
     }
 
     public static <T> ResponseResult<T> successResult(T data) {
         return new ResponseResult()
                 .setCode(ResultCode.SUCCESS)
-                .setMessage("SUCCESS")
+                .setMessage(DEFAULT_SUCCESS_MESSAGE)
                 .setData(data);
     }
 

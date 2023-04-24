@@ -1,14 +1,13 @@
 package com.workershigh.web.response;
 
 import com.workershigh.web.enums.ResultCode;
-import lombok.*;
 
 public class ResponseResult<T> {
     private int code;
     private String message;
     private T data;
 
-    public ResponseResult setCode(ResultCode resultCode) {
+    public ResponseResult<T> setCode(ResultCode resultCode) {
         this.code = resultCode.getCode();
         return this;
     }
@@ -21,7 +20,7 @@ public class ResponseResult<T> {
         return message;
     }
 
-    public ResponseResult setMessage(String message) {
+    public ResponseResult<T> setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -30,7 +29,7 @@ public class ResponseResult<T> {
         return data;
     }
 
-    public ResponseResult setData(T data) {
+    public ResponseResult<T> setData(T data) {
         this.data = data;
         return this;
     }
