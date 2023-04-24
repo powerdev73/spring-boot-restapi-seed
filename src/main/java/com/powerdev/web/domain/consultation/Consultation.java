@@ -1,8 +1,7 @@
-package com.workershigh.web.domain.consultation;
+package com.powerdev.web.domain.consultation;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.workershigh.web.domain.consultation.enums.SpaceType;
+import com.powerdev.web.domain.consultation.enums.SpaceType;
 import jakarta.persistence.*;
 import lombok.Data;
 

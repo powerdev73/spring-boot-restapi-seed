@@ -1,4 +1,4 @@
-package com.workershigh.web.response;
+package com.powerdev.web.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

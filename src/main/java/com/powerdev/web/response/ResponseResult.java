@@ -1,6 +1,6 @@
-package com.workershigh.web.response;
+package com.powerdev.web.response;
 
-import com.workershigh.web.enums.ResultCode;
+import com.powerdev.web.enums.ResultCode;
 
 public class ResponseResult<T> {
     private int code;

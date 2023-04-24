@@ -1,4 +1,4 @@
-package com.workershigh.web;
+package com.powerdev.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

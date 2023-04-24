@@ -1,8 +1,8 @@
-package com.workershigh.web.service;
+package com.powerdev.web.service;
 
-import com.workershigh.web.domain.consultation.Consultation;
-import com.workershigh.web.exception.ResourceNotFoundException;
-import com.workershigh.web.repository.ConsultationRepository;
+import com.powerdev.web.domain.consultation.Consultation;
+import com.powerdev.web.exception.ResourceNotFoundException;
+import com.powerdev.web.repository.ConsultationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

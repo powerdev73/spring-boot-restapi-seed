@@ -1,8 +1,7 @@
-package com.workershigh.web.repository;
+package com.powerdev.web.repository;
 
-import com.workershigh.web.domain.consultation.Consultation;
-import com.workershigh.web.domain.consultation.enums.SpaceType;
-import jakarta.transaction.Transactional;
+import com.powerdev.web.domain.consultation.Consultation;
+import com.powerdev.web.domain.consultation.enums.SpaceType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

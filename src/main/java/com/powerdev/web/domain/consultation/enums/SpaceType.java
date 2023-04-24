@@ -1,4 +1,4 @@
-package com.workershigh.web.domain.consultation.enums;
+package com.powerdev.web.domain.consultation.enums;
 
 public enum SpaceType {
     OFFICE("오피스"),

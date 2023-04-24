@@ -1,4 +1,4 @@
-package com.workershigh.web.enums;
+package com.powerdev.web.enums;
 
 public enum ResultCode {
     SUCCESS(200),

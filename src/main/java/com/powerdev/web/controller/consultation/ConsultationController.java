@@ -1,11 +1,11 @@
-package com.workershigh.web.controller.consultation;
+package com.powerdev.web.controller.consultation;
 
-import com.workershigh.web.controller.base.BaseController;
-import com.workershigh.web.domain.consultation.Consultation;
-import com.workershigh.web.exception.ResourceNotFoundException;
-import com.workershigh.web.repository.ConsultationRepository;
-import com.workershigh.web.response.PageResultOf;
-import com.workershigh.web.response.ResponseResult;
+import com.powerdev.web.controller.base.BaseController;
+import com.powerdev.web.domain.consultation.Consultation;
+import com.powerdev.web.exception.ResourceNotFoundException;
+import com.powerdev.web.repository.ConsultationRepository;
+import com.powerdev.web.response.PageResultOf;
+import com.powerdev.web.response.ResponseResult;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

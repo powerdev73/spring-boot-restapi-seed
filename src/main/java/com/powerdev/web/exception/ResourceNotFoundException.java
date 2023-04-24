@@ -1,4 +1,4 @@
-package com.workershigh.web.exception;
+package com.powerdev.web.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
     public ResourceNotFoundException() {

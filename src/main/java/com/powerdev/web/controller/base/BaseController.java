@@ -1,7 +1,7 @@
-package com.workershigh.web.controller.base;
+package com.powerdev.web.controller.base;
 
-import com.workershigh.web.enums.ResultCode;
-import com.workershigh.web.response.ResponseResult;
+import com.powerdev.web.enums.ResultCode;
+import com.powerdev.web.response.ResponseResult;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
