@@ -36,7 +36,8 @@ public class ConsultationController extends BaseController {
 
     @GetMapping("/consulation/{id}")
     public ResponseResult<Consultation> getConsulationById(@PathVariable Long id){
-        Consultation resConsulation = consultationRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException());
+        Consultation resConsulation = consultationRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Consulation", "id", id));
         return successResult(resConsulation);
     }
 
@@ -48,14 +49,16 @@ public class ConsultationController extends BaseController {
 
     @PutMapping("/consulation")
     public ResponseResult updateConsulationById(@RequestBody Consultation consultation){
-        Consultation findConsulation = consultationRepository.findById(consultation.getId()).orElseThrow(ResourceNotFoundException::new);
+        Consultation findConsulation = consultationRepository.findById(consultation.getId())
+                .orElseThrow(() -> new ResourceNotFoundException("Consulation", "id", consultation.getId()));
         consultationRepository.save(consultation);
         return successResult();
     }
 
     @DeleteMapping("/consulation/{id}")
     public ResponseResult deleteConsulation(@PathVariable Long id){
-        Consultation findConsulation = consultationRepository.findById(id).orElseThrow(ResourceNotFoundException::new);
+        Consultation findConsulation = consultationRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Consulation", "id", id));
         consultationRepository.deleteById(id);
         return successResult();
     }
