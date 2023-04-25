@@ -15,7 +15,6 @@ import java.util.Collections;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api")
 public class ConsultationController extends BaseController {
     private final ConsultationRepository consultationRepository;
     @GetMapping("/consulation")
