@@ -25,13 +25,13 @@ class ConsultationRepositoryTest {
     void createConsultation(){
         Consultation consultation = new Consultation();
         consultation.setSpace(SpaceType.SPORT);
-        consultation.setCompany("워커스하이");
+        consultation.setCompany("인터파크");
         consultation.setPhone("010-1234-9876");
-        consultation.setEmail("workershigh@gmail.com");
-        consultation.setCreateAt(LocalDateTime.now());
+        consultation.setEmail("interpark@gmail.com");
 
         Consultation saveResult = consultationRepository.save(consultation);
         Optional<Consultation> findResult = consultationRepository.findById(saveResult.getId());
+        System.out.println(findResult.get().toString());
         System.out.println(findResult.get().getSpace().label());
         assertThat(saveResult.getCompany()).isEqualTo(findResult.get().getCompany());
     }
@@ -40,7 +40,7 @@ class ConsultationRepositoryTest {
     void getList(){
        initialData();
 
-       Pageable pageable = PageRequest.of(0,2);
+       Pageable pageable = PageRequest.of(0,10);
        Page<Consultation> consultListPage = consultationRepository.findAll(pageable);
        consultListPage.forEach(System.out::println);
     }
@@ -48,10 +48,9 @@ class ConsultationRepositoryTest {
     void initialData(){
         Consultation consultation1 = new Consultation();
         consultation1.setSpace(SpaceType.HOTEL);
-        consultation1.setCompany("워커스하이");
+        consultation1.setCompany("코리아");
         consultation1.setPhone("010-1234-9876");
-        consultation1.setEmail("workershigh@gmail.com");
-        consultation1.setCreateAt(LocalDateTime.now());
+        consultation1.setEmail("korea@gmail.com");
         consultationRepository.save(consultation1);
 
         Consultation consultation2 = new Consultation();
@@ -59,7 +58,6 @@ class ConsultationRepositoryTest {
         consultation2.setCompany("쿠팡");
         consultation2.setPhone("010-3434-3232");
         consultation2.setEmail("cupang@cupang.com");
-        consultation2.setCreateAt(LocalDateTime.now());
         consultationRepository.save(consultation2);
     }
 }

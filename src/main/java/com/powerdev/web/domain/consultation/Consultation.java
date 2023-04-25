@@ -1,15 +1,18 @@
 package com.powerdev.web.domain.consultation;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.powerdev.web.domain.BaseEntity;
 import com.powerdev.web.domain.consultation.enums.SpaceType;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
-import java.time.LocalDateTime;
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 @Data
 @Entity
 @Table(name = "tb_consultation")
-public class Consultation {
+public class Consultation extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,8 +27,4 @@ public class Consultation {
 
     @Column(length = 100, nullable = false, name = "email")
     private String email;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime createAt;
 }
