@@ -1,7 +1,7 @@
 package com.powerdev.web.domain.consultation;
 
 import com.powerdev.web.domain.BaseEntity;
-import com.powerdev.web.domain.consultation.enums.SpaceType;
+import com.powerdev.web.domain.enums.SpaceType;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -17,11 +17,11 @@ import java.util.Collections;
 @RequiredArgsConstructor
 public class ConsultationController extends BaseController {
     private final ConsultationRepository consultationRepository;
-    @GetMapping("/consulation")
-    public ResponseResult<PageResultOf<Consultation>> getListConsulationWithPagenation(){
+    @GetMapping("/consulation/{page}")
+    public ResponseResult<PageResultOf<Consultation>> getListConsulationWithPagenation(@PathVariable Integer page){
 
-        PageResultOf<Consultation> result = PageResultOf.of(Collections.emptyList(), 0, 10, 0,0);
-        Pageable pageable = PageRequest.of(0, 10);
+        PageResultOf<Consultation> result = PageResultOf.of(Collections.emptyList(), page, 10, 0,0);
+        Pageable pageable = PageRequest.of(page, 10);
 
         var resultList = consultationRepository.findAll(pageable);
 
